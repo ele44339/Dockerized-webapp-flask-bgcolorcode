@@ -26,34 +26,34 @@ Note 3: Command line argument precedes over environment variable.
 ```bash
     -$ mkdir -p ~/MyProjects
     -$ cd ~/MyProjects
-    -$ git clone https://github.com/gregkoul/Dockerized-webapp-flask-bgcolorcode.git
+    -$ git clone https://github.com/ele44339/Dockerized-webapp-flask-bgcolorcode.git
                       OR via SSH
-    -$ git clone git@github.com:gregkoul/Dockerized-webapp-flask-bgcolorcode.git
+    -$ git clone git@github.com:ele44339/Dockerized-webapp-flask-bgcolorcode.git
 ```
 2. Now you have to build the Docker Image locally.
 ```bash
     -$ cd ~/MyProjects/Dockerized-webapp-flask-bgcolorcode
-    -$ docker build . -t gregkoul/webapp-flask-bgcolorcode:2.0
+    -$ docker build . -t ele44339/flask-bgcolorcode:1.0
 ```
 3. Now you have to spin up as many containers you want in different ports.
 
 Royal blue color and Static title without any command line argument nor environmental variable.
 ```bash
-    -$ docker run -p 8002:8000 gregkoul/webapp-flask-bgcolorcode:2.0
+    -$ docker run -p 8002:8000 ele44339/flask-bgcolorcode:1.0
 ```
 Blue color with environmental variable and the Static title:
 ```bash
-    -$ docker run -p 8000:8000 -e APP_COLORCODE="#0000FF" gregkoul/webapp-flask-bgcolorcode:2.0
+    -$ docker run -p 8000:8000 -e APP_COLORCODE="#0000FF" ele44339/flask-bgcolorcode:1.0
 ```
 Navy color with command line argument and the static title:
 ```bash
-    -$ docker run -p 8001:8000 gregkoul/webapp-flask-bgcolorcode:2.0 --colorcode="#000080"
+    -$ docker run -p 8001:8000 ele44339/flask-bgcolorcode:1.0 --colorcode="#000080"
 ```
 Red color and Dynamic title with environmental variables:
 ```bash
-    -$ docker run -p 8003:8000 -e APP_COLORCODE="#FF0000" -e APP_TITLE="Test Title" gregkoul/webapp-flask-bgcolorcode:2.0
+    -$ docker run -p 8003:8000 -e APP_COLORCODE="#FF0000" -e APP_TITLE="Test Title" ele44339/flask-bgcolorcode:1.0
 ```
 Olive color and Dynamic title with command line arguments:
 ```bash
-    -$ docker run -p 8004:8000 gregkoul/webapp-flask-bgcolorcode:2.0 --colorcode="#808000" --title="Test Title"
+    -$ docker run -p 8004:8000 ele44339/flask-bgcolorcode:1.0 --colorcode="#808000" --title="Test Title"
 ```
